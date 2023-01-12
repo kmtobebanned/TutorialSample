@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import subprocess
 import tempfile
+import os
 
 
 with open('/home/runner/work/TutorialSample/TutorialSample/DocsGeneration/doxygen-output/html/index.html', 'r') as f:
@@ -33,4 +34,5 @@ for row in table1.find_all('tr'):
 
 
 df = df.append(contents, ignore_index=True)
+os.mkdir('/home/runner/work/TutorialSample/TutorialSample/DocsGeneration/docs/_shared')
 print (df.reset_index(drop=True).to_json(r'/home/runner/work/TutorialSample/TutorialSample/DocsGeneration/docs/_shared/df.json', orient='records'))
