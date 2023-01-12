@@ -16,6 +16,12 @@ jobs:
     name: Sparse Checkout
     runs-on: ubuntu-latest
     steps:
+      - name: Sparse checkout action
+        uses: snow-actions/sparse-checkout@v1.2.0
+        with:
+          patterns: |
+            .DocsGeneration
+            
       - name: list dir
         run: |
           ls -lah
