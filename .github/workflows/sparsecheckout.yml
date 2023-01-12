@@ -20,7 +20,7 @@ jobs:
         uses: snow-actions/sparse-checkout@v1.2.0
         with:
           patterns: |
-            .DocsGeneration
+            DocsGeneration
             
       - name: list dir
         run: |
