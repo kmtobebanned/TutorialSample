@@ -38,7 +38,7 @@ jobs:
           doxygen DocsGeneration/Doxyfile
 
       - name: Check Doxygen output
-        run: ls lah DocesGeneration/doxygen-output 
+        run: ls -lah DocesGeneration/doxygen-output 
 
       - name: Install Python Packages
         run: |
