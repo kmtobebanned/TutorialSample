@@ -37,9 +37,12 @@ jobs:
           doxygen -v
           doxygen DocsGeneration/Doxyfile
 
+      - name: Check TutorialSample folder
+        run: ls -lah /home/runner/work/TutorialSample 
+        
       - name: Check Doxygen output
-        run: ls -lah DocsGeneration/doxygen-output 
-
+        run: ls -lah ./DocsGeneration/doxygen-output 
+        
       - name: Install Python Packages
         run: |
           pip install beautifulsoup4
