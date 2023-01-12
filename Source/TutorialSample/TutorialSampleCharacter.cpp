@@ -40,6 +40,7 @@ ATutorialSampleCharacter::ATutorialSampleCharacter()
 //! [ATutorialSampleCharacter - BeginPlay]
 void ATutorialSampleCharacter::BeginPlay()
 {
+	// add comment
 	// Call the base class  
 	Super::BeginPlay();
 
