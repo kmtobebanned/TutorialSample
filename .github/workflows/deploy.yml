@@ -41,7 +41,7 @@ jobs:
         run: pwd
         
       - name: Check TutorialSample folder
-        run: ls -lah /home/runner/work/TutorialSample 
+        run: ls -lah /home/runner/work/TutorialSample/TutorialSample
         
       - name: Check Doxygen output
         run: ls -lah ./DocsGeneration/doxygen-output 
