@@ -44,7 +44,7 @@ jobs:
         run: ls -lah /home/runner/work/TutorialSample/TutorialSample
         
       - name: Check Doxygen output
-        run: ls -lah ./DocsGeneration/doxygen-output 
+        run: ls -lah ./DocsGeneration/doxygen-output/html
         
       - name: Install Python Packages
         run: |
