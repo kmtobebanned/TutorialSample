@@ -37,6 +37,9 @@ jobs:
           doxygen -v
           doxygen DocsGeneration/Doxyfile
 
+      - name: current folder
+        run: pwd
+        
       - name: Check TutorialSample folder
         run: ls -lah /home/runner/work/TutorialSample 
         
