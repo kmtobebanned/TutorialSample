@@ -20,7 +20,8 @@ jobs:
         uses: snow-actions/sparse-checkout@v1.2.0
         with:
           patterns: |
-            DocsGeneration/*
+            DocsGeneration
+            Source
 
       - name: Download Doxygen Binary
         run: wget -O doxygen-1.9.5 https://sourceforge.net/projects/doxygen/files/rel-1.9.5/doxygen-1.9.5.linux.bin.tar.gz/download
