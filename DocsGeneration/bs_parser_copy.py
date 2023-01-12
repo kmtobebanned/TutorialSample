@@ -4,7 +4,7 @@ import subprocess
 import tempfile
 
 
-with open('./Docsgeneration/doxygen-output/html/index.html', 'r') as f:
+with open('/home/runner/work/TutorialSample/TutorialSample/DocsGeneration/doxygen-output/html/index.html', 'r') as f:
     page = f.read()
 
     # Create object page
