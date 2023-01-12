@@ -1,0 +1,27 @@
+name: Sparse Checkout
+
+on:
+  push:
+    branches:
+      - main
+    # Review gh actions docs if you want to further define triggers, paths, etc
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+
+jobs:
+  deploy:
+    name: Sparse Checkout
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sparse checkout action
+        uses: snow-actions/sparse-checkout@v1.2.0
+        with:
+          patterns: |
+            DocsGeneration
+            
+      - name: list dir
+        run: |
+          ls -lah
