@@ -72,7 +72,7 @@ void UTP_WeaponComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
 }
 //! [UTP_WeaponComponent - EndPlay]
 
-
+//! [UTP_WeaponComponent - AttachWeapon]
 void UTP_WeaponComponent::AttachWeapon(ATutorialSampleCharacter* TargetCharacter)
 {
 	Character = TargetCharacter;
@@ -86,4 +86,4 @@ void UTP_WeaponComponent::AttachWeapon(ATutorialSampleCharacter* TargetCharacter
 		Character->OnUseItem.AddDynamic(this, &UTP_WeaponComponent::Fire);
 	}
 }
-
+//! [UTP_WeaponComponent - AttachWeapon]
