@@ -34,5 +34,6 @@ for row in table1.find_all('tr'):
 
 
 df = df.append(contents, ignore_index=True)
+print(df.to_string())
 os.mkdir('/home/runner/work/TutorialSample/TutorialSample/DocsGeneration/docs/_shared')
 print (df.reset_index(drop=True).to_json(r'/home/runner/work/TutorialSample/TutorialSample/DocsGeneration/docs/_shared/df.json', orient='records'))
