@@ -37,12 +37,15 @@ ATutorialSampleCharacter::ATutorialSampleCharacter()
 
 }
 
+//! [ATutorialSampleCharacter - BeginPlay]
 void ATutorialSampleCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
 
 }
+//! [ATutorialSampleCharacter - BeginPlay]
+
 
 //////////////////////////////////////////////////////////////////////////// Input
 

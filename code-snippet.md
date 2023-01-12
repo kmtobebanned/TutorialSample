@@ -7,3 +7,4 @@ ATutorialSampleCharacter - MoveForward  | \snippet ../Source/TutorialSample/Tuto
 ATutorialSampleCharacter - MoveRight  | \snippet ../Source/TutorialSample/TutorialSampleCharacter.cpp ATutorialSampleCharacter - MoveRight
 UTP_WeaponComponent - EndPlay  | \snippet ../Source/TutorialSample/TP_WeaponComponent.cpp UTP_WeaponComponent - EndPlay
 UTP_WeaponComponent - AttachWeapon  | \snippet ../Source/TutorialSample/TP_WeaponComponent.cpp UTP_WeaponComponent - AttachWeapon
+ATutorialSampleCharacter - BeginPlay  | \snippet ../Source/TutorialSample/TutorialSampleCharacter.cpp ATutorialSampleCharacter - BeginPlay
