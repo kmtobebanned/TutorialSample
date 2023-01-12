@@ -33,6 +33,7 @@ jobs:
           sudo make install
 
       - name: Check Doxygen Version
+        working-directory: ./DocsGeneration
         run: |
           doxygen -v
           doxygen DocsGeneration/Doxyfile
