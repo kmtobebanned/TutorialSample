@@ -36,7 +36,7 @@ jobs:
         working-directory: ./DocsGeneration
         run: |
           doxygen -v
-          doxygen DocsGeneration/Doxyfile
+          doxygen Doxyfile
 
       - name: Install Python Packages
         run: |
