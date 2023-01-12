@@ -1,0 +1,39 @@
+name: Docs-Generation
+
+on:   
+  push:
+    branches: 
+    - main
+  pull_request:
+    branches: 
+    - main
+
+permissions:
+  pages: write
+  deployments: write
+  id-token: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download Doxygen Binary
+        run: wget -O doxygen-1.9.5 https://sourceforge.net/projects/doxygen/files/rel-1.9.5/doxygen-1.9.5.linux.bin.tar.gz/download
+        
+      - name: Unzip & Install Doxygen
+        run: |
+          tar -xvf doxygen-1.9.5
+          cd doxygen-1.9.5
+          sudo make install
+
+      - name: Check Doxygen Version
+        run: doxygen -v
+        
+      - name: Check Folder location
+        run: pwd
+      
+      - name: Install Python Packages
+        run: |
+          pip install beautifulsoup4
+          pip install request
