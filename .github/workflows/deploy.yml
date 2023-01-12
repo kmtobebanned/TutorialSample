@@ -33,10 +33,12 @@ jobs:
           sudo make install
 
       - name: Check Doxygen Version
-        working-directory: ./DocsGeneration
         run: |
           doxygen -v
-          doxygen Doxyfile
+          doxygen DocsGeneration/Doxyfile
+
+      - name: Check Doxygen output
+        run: ls lah DocesGeneration/doxygen-output 
 
       - name: Install Python Packages
         run: |
