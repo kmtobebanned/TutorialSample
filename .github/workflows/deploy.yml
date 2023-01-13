@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - fixing
     # Review gh actions docs if you want to further define triggers, paths, etc
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
@@ -53,7 +54,8 @@ jobs:
 
       - name: Run Python scraping
         run: |
-          python3 DocsGeneration/bs_parser_copy.py
+          dir=$PWD
+          python3 DocsGeneration/bs_parser.py --currentdir $dir 
             
       - uses: actions/setup-node@v3
         with:
