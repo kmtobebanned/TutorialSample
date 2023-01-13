@@ -55,7 +55,7 @@ jobs:
       - name: Run Python scraping
         run: |
           dir=$PWD
-          python3 DocsGeneration/bs_parser_copy.py --currentdir $dir 
+          python3 DocsGeneration/bs_parser.py --currentdir $dir 
             
       - uses: actions/setup-node@v3
         with:
