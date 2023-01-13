@@ -23,7 +23,7 @@ def main():
 
 
 def parse_doxyhtml(currentdir):
-    with open(currentdir, 'r') as f:
+    with open(f'{currentdir}{DOXYGEN_HTML_PATH}', 'r') as f:
         page = f.read()
 
     # Create object page
