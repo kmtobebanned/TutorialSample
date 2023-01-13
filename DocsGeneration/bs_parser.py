@@ -7,7 +7,7 @@ import argparse
 
 
 DOCUSAURUS_JSON_PATH ='/DocsGeneration/docs/_shared/df.json'
-DOCUSAURUS_SHARED_DIR = '/docs/_shared'
+DOCUSAURUS_SHARED_DIR = '/DocsGeneration/docs/_shared'
 DOXYGEN_HTML_PATH = '/DocsGeneration/doxygen-output/html/index.html'
 
 def parse_args():
@@ -52,7 +52,6 @@ def parse_doxyhtml(currentdir):
 
 
     df = df.append(contents, ignore_index=True)
-    print(df.to_string())
     os.mkdir(f'{currentdir}{DOCUSAURUS_SHARED_DIR}')
     print (df.reset_index(drop=True).to_json(f'{currentdir}{DOCUSAURUS_JSON_PATH}', orient='records'))
 
