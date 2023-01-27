@@ -52,7 +52,9 @@ def parse_doxyhtml(currentdir):
 
 
     df = df.append(contents, ignore_index=True)
-    os.mkdir(f'{currentdir}{DOCUSAURUS_SHARED_DIR}')
+    docusaurus_shared_folder = f'{currentdir}{DOCUSAURUS_SHARED_DIR}'
+    if(os.path.exists(docusaurus_shared_folder) == False):
+        os.mkdir(docusaurus_shared_folder)
     print (df.reset_index(drop=True).to_json(f'{currentdir}{DOCUSAURUS_JSON_PATH}', orient='records'))
 
 if __name__ == "__main__":
